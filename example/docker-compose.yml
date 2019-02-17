@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  # builds semantic and watches for changes
+  bootstrap:
+    image: mkieblesz/bootstrap
+    ports:
+      - '9001:9001'
+    volumes:
+      # keeping entire directory of files in source control
+      # - './scss:/frontend/bootstrap/scss'
+      # keeping one file in source control for small changes
+      # - './js:/frontend/bootstrap/js'
+      # - './js/src/alert.js:/frontend/bootstrap/js/src/alert.js'
+      # - './scss/_variables.scss:/frontend/bootstrap/scss/_variables.scss'
+      # - './package.json:/frontend/bootstrap/package.json'
+      - '.:/frontend/bootstrap'
+    command: /bin/bash -x -c 'while true; do sleep 60; done'
