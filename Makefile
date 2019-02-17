@@ -1,5 +1,5 @@
 build:
 	docker build -t mkieblesz/bootstrap .
 
-push_version:
+push:
 	docker push mkieblesz/bootstrap:latest

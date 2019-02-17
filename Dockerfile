@@ -16,4 +16,3 @@ RUN bundle install
 RUN npm install
 
 EXPOSE 9001
-CMD ["npm start"]
